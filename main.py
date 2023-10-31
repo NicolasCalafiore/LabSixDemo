@@ -8,10 +8,14 @@ def print_menu():    # Prints Main Menu - Returns Menu Selection INT
     return menuSelection
 
 def encode():    # Converts int to list, shifts each element up by 3, returns int from joined list
-    password = int(input("Please enter your password to encode: "))
-    passwordList = [int(char) for char in str(password)]
+    password = input("Please enter your password to encode: ")
+    passwordList = [int(char) for char in password]
+    encodedList = []
+    for i in range(len(passwordList)):
+        encodedDigit = (passwordList[i] + 3) % 10
+        encodedList.append(encodedDigit)
     print("Your password has been encoded and stored!")
-    return (''.join(str(int(char) + 3) for char in passwordList))
+    return (''.join(str(digit) for digit in encodedList))
 
 def decode(password):
     return None # TODO: Decode Function
