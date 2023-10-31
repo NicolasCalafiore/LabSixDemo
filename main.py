@@ -14,11 +14,15 @@ def encode():    # Converts int to list, shifts each element up by 3, returns in
     for i in range(len(passwordList)):
         encodedDigit = (passwordList[i] + 3) % 10
         encodedList.append(encodedDigit)
-    print("Your password has been encoded and stored!")
     return (''.join(str(digit) for digit in encodedList))
 
-def decode(password):
-    return None # TODO: Decode Function
+def decode(encoded_password):
+    encodedList = [int(char) for char in encoded_password]
+    decodedList = []
+    for i in range(len(encodedList)):
+        decodedDigit = (encodedList[i] - 3) % 10
+        decodedList.append(decodedDigit)
+    return ''.join(str(digit) for digit in decodedList)
 
 def Main():
     menuSelection = ""
