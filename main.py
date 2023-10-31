@@ -19,7 +19,7 @@ def decode(password):
 def Main():
     menuSelection = ""
 
-    while menuSelection != "3":    # While User Does Not Select Quite
+    while menuSelection != "3":    # While User Does Not Select Quit
 
         menuSelection = print_menu()
         if menuSelection == "1":    # Encode
@@ -27,7 +27,7 @@ def Main():
             print("Your password has been encoded and stored!\n")
 
 
-        if menuSelection == "2":
+        if menuSelection == "2": # Decode
             print(f'The encoded pass is {PASSWORD_ENCODED}, and the original passwird is {decode(PASSWORD_ENCODED)}\n')
 
 
