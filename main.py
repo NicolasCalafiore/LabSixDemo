@@ -28,7 +28,7 @@ def Main():
 
 
         if menuSelection == "2": # Decode
-            print(f'The encoded pass is {PASSWORD_ENCODED}, and the original passwird is {decode(PASSWORD_ENCODED)}\n')
+            print(f'The encoded pass is {PASSWORD_ENCODED}, and the original password is {decode(PASSWORD_ENCODED)}\n')
 
 
 
